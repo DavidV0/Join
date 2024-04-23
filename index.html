@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN - Login</title>
+    <link rel="shortcut icon" href="assets/img/index/Logo for Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sign-in.css">
+</head>
+
+<body onload="setCursor(); initLogIn()">
+
+    <div>
+        <img src="assets/img/login/logo-login.svg" alt="Join Logo" class="join-logo-animation logo-login-img">
+        <div class="fading-animation sign-up-container" id="sign-up-container">
+            <span>Not a Join user?</span>
+            <button id="sign-up-button" onclick="signUp()">Sign up</button>
+        </div>
+    </div>
+
+    <div id="log-in-container" class="fading-animation">
+        <span class="login-headline">Log in</span>
+        <img src="assets/img/login/underline-login.svg">
+        <form onsubmit="logIn(); return false">
+            <div class="input-container">
+                <input type="email" required placeholder="Email" id="email-input">
+                <div class="password-container">
+                    <input type="password" required placeholder="Password" id="password-input">
+                    <img src="assets/img/login/input-lock.svg" onclick="showPassword()" id="img-lock">
+                </div>
+                <div id="wrong-password">
+                    <span>Wrong password Ups! Try again.</span>
+                </div>
+            </div>
+            <div>
+                <label class="login-checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <img src="assets/img/login/checkbox-default.svg" class="img-unchecked">
+                    <img src="assets/img/login/checkbox-checked.svg" class="img-checked" id="checked-checkbox">
+                    <span> Remember me</span>
+                </label>
+            </div>
+            <div class="login-btns">
+                <button id="log-in-btn">Log in</button>
+                <button id="guest-log-in-btn" onclick="guestLogIn()"> Guest Log in</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="sign-up-successfully" style="opacity: 0;">
+        <span>You Signed Up Successfully</span>
+    </div>
+    <div id="email-in-use" style="opacity: 0;">
+        <span>Email allready in use. Please use another one !</span>
+    </div>
+
+    <div id="sign-in-container">
+        <div class="header-box">
+            <img src="assets/img/login/arrow-left-line.svg" onclick="goBack()" class="arrow">
+            <div class="sign-in-headline">
+                <span class="sign-in-headline">Sign in</span>
+                <img src="assets/img/login/underline-login.svg">
+            </div>
+        </div>
+
+        <form onsubmit="saving(); return false">
+
+                <div class="ipn-field">
+                    <input type="text" id="sign-in-name" placeholder="Name or Surname & Name" required>
+                </div>
+                <div class="ipn-field">
+                    <input type="email" required placeholder="Email" id="sign-in-email-input">
+                </div>
+                <div class="sign-in-password-container ipn-field">
+                    <input type="password" required placeholder="Password" id="sign-in-password-input">
+                    <img src="assets/img/login/input-lock.svg" onclick="showSignInPassword()" id="sign-in-img-lock">
+                </div>
+                <div class="confirm-password-container ipn-field">
+                    <input type="password" required placeholder="Confirm Password" id="confirm-password-input">
+                    <img src="assets/img/login/input-lock.svg" onclick="showConfirmPassword()" id="confirm-img-lock">
+                </div>
+                <div>
+                    <span id="sign-in-password-match">Your Passwords don´t match. Try again.</span>
+                </div>
+                <div class="sing-in-login-checkbox-container">
+                    <label class="sign-in-login-checkbox">
+                        <input type="checkbox" id="accept-checkbox">
+                        <img src="assets/img/login/checkbox-default.svg" class="img-unchecked" onclick="toggleButton()"
+                            id="unchecked-checkbox">
+                        <img src="assets/img/login/checkbox-checked.svg" class="img-checked" id="accept-checked-checkbox"
+                            onclick="toggleButton()">
+                        <span>I accept the <a href="html/privacy_policy.html">Privacy Policy</a></span>
+                    </label>
+                </div>
+                <div class="login-btns">
+                    <button id="sign-in-btn" style="display:none">Sign in</button>
+                </div>
+            </form>
+                <div class="login-btns">
+                    <button id="sign-in-btn" style="display:none" >Sign in</button>
+                </div>
+                
+            </form>
+            <div id="allready-exists"></div>
+         </div>
+
+    <div class="footer-links fading-animation">
+        <a href="html/privacy_policy.html" class="privacy-link">Privacy Policy</a>
+        <a href="html/legal_notice.html" class="legal-link">Legal notice</a>
+    </div>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/sign-in.js"></script>
+    <script src="./js/script.js" ></script>
+</body>
+
+</html>

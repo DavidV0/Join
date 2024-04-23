@@ -1,0 +1,67 @@
+body {
+  margin: 0px;
+}
+
+html {
+  font-family: "Inter";
+}
+
+.privacy-body {
+  padding-left: calc(20vh + 96px);
+  padding-right: 96px;
+  padding-top: calc(10vh + 56px);
+  background-color: rgb(246, 247, 248);
+  position: sticky;
+  overflow: auto;
+  font-family: "Inter";
+  font-size: 16px;
+}
+
+.privacy-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.privacy-arrow {
+  height: 37px;
+  width: 37px;
+  position: fixed;
+  right: 60px;
+}
+
+.privacy-h2 {
+  font-size: 61px;
+  font-weight: bold;
+}
+
+.privacy-h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-block-end: 0;
+}
+
+@media (max-width: 900px) {
+ 
+  .privacy-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: start;
+  }
+  .privacy-h2 {
+    font-size: 36px;
+    justify-content: start;
+    text-align: start;
+  }
+  .privacy-arrow {
+    position: absolute;
+    top: 130px;
+    right: 20px;
+  }
+  .privacy-head {
+    font-size: 36px;
+    justify-content: start;
+    text-align: start;
+  }
+}

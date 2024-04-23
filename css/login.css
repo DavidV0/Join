@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  background-color: rgb(246, 247, 248);
+  font-family: 'Inter';
+}
+
+html {
+  font-family: 'Inter';
+}
+
+#email-input {
+  background: url(../assets/img/login/input-email.svg) no-repeat scroll 96%;
+  background-size: 24px;
+  font-family: "Inter";
+  gap: 10px;
+  height: 48px;
+  width: 422px;
+  border-radius: 10px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#email-input:hover {
+  border-color: #29abe2;
+}
+
+
+#password-input:hover {
+  border-color: #29abe2;
+}
+
+
+#log-in-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 493px;
+  width: 593px;
+  border-radius: 30px;
+  padding: 48px, 115px, 48px, 115px;
+  gap: 32px;
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+
+#log-in-btn {
+  width: 110px;
+  height: 48px;
+  padding: 15px, 24px, 15px, 24px;
+  border-radius: 8px;
+  gap: 10px;
+  background-color: #2a3647;
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+  border: none;
+}
+
+.login-btns {
+  display: flex;
+  justify-content: center;
+}
+
+#guest-log-in-btn {
+  width: 177px;
+  height: 48px;
+  padding: 15px, 24px, 15px, 24px;
+  border-radius: 8px;
+  color: #2a3647;
+  border-radius: 8px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+  border-color: #2a3647;
+  margin-left:32px;
+}
+
+#guest-log-in-btn:hover {
+  color: #29abe2;
+  border-color: #29abe2;
+}
+
+#log-in-btn:hover {
+  color: white;
+  background-color: #29abe2;
+}
+
+#img-lock {
+  height: 24px;
+  width: 24px;
+  border: none;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  cursor: pointer;
+}
+
+.login-headline {
+  width: 315px;
+  height: 73px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 61px;
+  text-align: center;
+}
+
+.login-checkbox {
+  cursor: pointer;
+  caret-color: transparent;
+  display: flex;
+  justify-content: start !important;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.login-checkbox span {
+  cursor: auto;
+  font-family: 'Inter';
+
+}
+
+/* Hide the browsers default checkbox*/
+.login-checkbox input {
+  display: none;
+}
+
+.img-unchecked:hover {
+  background-image: url(../assets/img/login/checkbox-default\ hover.svg);
+}
+
+/* Hide the checked checkbox */
+.img-checked {
+  display: none;
+}
+
+.img-checked:hover {
+  background-image: url(../assets/img/login/checkbox-default\ checked.svg);
+}
+
+/* If checked, show the checked image */
+.login-checkbox input:checked ~ .img-checked {
+  display: inline;
+}
+
+/* If checked, hide the unchecked image */
+.login-checkbox input:checked ~ .img-unchecked {
+  display: none;
+}
+
+.password-container {
+  position: relative;
+  width: 422px;
+}
+
+#password-input {
+  background-size: 24px;
+  font-family: "Inter";
+  gap: 10px;
+  height: 48px;
+  width: 422px;
+  border-radius: 10px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+}
+
+
+
+#wrong-password {
+  color: red;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  display: none;
+}
+
+.password-input {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #a8a8a8;
+  padding: 24px 24px 0px 24px;
+}
+
+.footer-links a:hover {
+  font-size: 18px;
+  color: #29abe2;
+  padding: 24px 18px 0px 18px;
+}
+
+.sign-up-container {
+  position: absolute;
+  padding-top: 50px;
+  right: 60px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Inter";
+  gap: 35px;
+}
+
+.logo-login-img {
+  margin: 60px;
+  width: 100px;
+  height: 120px;
+}
+
+#sign-up-button {
+  width: 91px;
+  height: 49px;
+  padding: 15px, 16px, 15px, 16px;
+  background-color: #2a3647;
+  border: none;
+  border-radius: 8px;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#sign-up-button:hover {
+  background-color: #29abe2;
+}
+
+/* Join Logo animation*/
+.join-logo-animation {
+    z-index: 2;
+    animation: logo-mid-to-upper-left 1.0s ease-in;
+    transition: transform(-50% -50%);
+    position: absolute;
+}
+
+@keyframes logo-mid-to-upper-left {
+  0% {
+    height: 334px;
+    width: 274px;
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    height: 120px;
+    width: 100px;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+.fading-animation {
+  animation: fading-in 2s;
+}
+
+@keyframes fading-in {
+  0% {
+    z-index: -1;
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 0;
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  #log-in-container {
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+
+  #sign-up-button {
+    z-index: 999;
+  }
+
+  #email-input,
+  #password-input {
+    width: auto;
+    margin-left: 50px;
+  }
+  #img-lock {
+    position: absolute;
+    top: 25%;
+    right:85px;
+  }
+
+  .login-checkbox {
+    margin-left: 80px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  #guest-log-in-btn {
+    margin-left: 10px;
+    width: 150px;
+  }
+
+  #log-in-container {
+    top: 45%;
+    width: 290px !important;
+    margin-left: 0px !important;
+    padding-left: 0;
+    height: 400px;
+
+  }
+  #sign-up-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+  }
+
+  #email-input,
+  #password-input {
+    width: 250px;
+    margin-left: 10px;
+    padding-left: 0;
+  }
+
+  .password-container {
+    width: auto;
+  }
+
+
+  #img-lock {
+    position: absolute;
+    top: 25%;
+    right: 20px;
+  }
+
+  .login-checkbox {
+    margin-left: 60px;
+  }
+
+  .join-logo-animation {
+  width: 50px;
+  height: 50px;
+  }
+
+  
+
+}

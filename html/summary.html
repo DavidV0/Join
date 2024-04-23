@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/index/Logo for Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/summary.css" />
+    <script src="../js/summary.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <title>JOIN - Summary</title>
+  </head>
+  <body onload="includeHTML(); changeSalution(); loadCurrentUser(); generateDate(); initSummary() ">
+    <div w3-include-html="../includes/sidebar.html"></div>
+    <div w3-include-html="../includes/header.html"></div>
+    <div class="summary">
+      <div class="summary-header">
+        <div class="headline">Join 786</div>
+        <div class="divider"></div>
+        <div class="description">Key Metrics at a Glance</div>
+      </div>
+      <div class="summary-body">
+        <div class="summary-information">
+          <div class="info-field top-row">
+            <div
+              class="info-bubble cursor-pointer box-shadow" onclick="linkToAddTasks()"
+              onmouseover="changeWhiteImage('pencil')"
+              onmouseout="changeBlackImage('pencil')"
+            >
+              <img id="pencil" src="../assets/img/summary/pencil.svg" />
+              <div class="info-value">
+                <div id="amount-toDo" class="amount">1</div>
+                <span class="status">To-do</span>
+              </div>
+            </div>
+            <div
+              class="info-bubble cursor-pointer box-shadow" 
+              onmouseover="changeWhiteImage('done')"
+              onmouseout="changeBlackImage('done')" onclick="linkToAddTasks()"
+            >
+              <img id="done" src="../assets/img/summary/done.svg" />
+              <div class="info-value ">
+                <div id="amount-done" class="amount">2</div>
+                <span class="status">Done</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-bubble-middle cursor-pointer box-shadow middle-row" onclick="linkToAddTasks()">
+            <div class="left-part">
+              <img src="../assets/img/summary/urgent-summary.svg" />
+              <div>
+                <div id="urgent-amount">1</div>
+                <span>Urgent</span>
+              </div>
+            </div>
+            <div class="middle-divider"></div>
+            <div class="calender">
+              <span id="calender-value">December, 11th 2023 </span>
+              <span class="fs16-400">Upcoming Deadline</span>
+            </div>
+          </div>
+          <div class="info-field cursor-pointer bottom-row" onclick="linkToAddTasks()">
+            <div class="info-bubble-bottom box-shadow">
+              <span id="bottom-left-amount" class="fs64-600">5</span>
+              <span class="fs20-400">Tasks in Board</span>
+            </div>
+            <div class="info-bubble-bottom cursor-pointer box-shadow" onclick="linkToAddTasks()">
+              <span id="bottom-middle-amount" class="fs64-600">2</span>
+              <span class="fs20-400">Tasks in Progress</span>
+            </div>
+            <div class="info-bubble-bottom cursor-pointer box-shadow" onclick="linkToAddTasks()">
+              <span id="bottom-right-amount" class="fs64-600" >2</span>
+              <span class="fs20-400">Awaiting Feedback</span>
+            </div>
+          </div>
+        </div>
+        <div class="summary-user">
+          <span id="good-morning" class="good-morning">Good morning</span>
+          <span id="display-user" class="user">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </body>

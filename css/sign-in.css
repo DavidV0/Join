@@ -1,0 +1,360 @@
+#sign-in-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 800px;
+  width: 600px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.sign-in-login-checkbox span {
+  cursor: auto;
+}
+
+.sign-in-login-checkbox {
+  font-family: "Inter";
+  gap: 10px;
+  height: 48px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: start !important;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.login-btns {
+  height: 40px;
+}
+
+.sign-in-login-checkbox img {
+  cursor: pointer;
+}
+
+/* Hide the browsers default checkbox*/
+.sign-in-login-checkbox input {
+  display: none;
+}
+
+.sign-in-img-unchecked:hover {
+  background-image: url(../assets/img/login/hover.svg);
+}
+
+/* Hide the checked checkbox */
+.sign-in-img-checked {
+  display: none;
+}
+
+.sign-in-img-checked:hover {
+  background-image: url(../assets/img/login/checkbox-default\ checked.svg);
+}
+
+/* If checked, show the checked image */
+.sign-in-login-checkbox input:checked ~ .img-checked {
+  display: inline;
+}
+
+/* If checked, hide the unchecked image */
+.sign-in-login-checkbox input:checked ~ .img-unchecked {
+  display: none;
+}
+
+.sign-in-container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-container-header img {
+  cursor: pointer;
+  padding-right: 60px;
+}
+
+.sign-in-headline {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 61px;
+  font-weight: 700;
+  padding-bottom: 30px
+}
+
+.sign-in-headline img {
+  width: 150px;
+  padding-left: 30px;
+}
+
+.sign-in-form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sign-in-form input {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#sign-in-password-match {
+  height: 20px;
+  color: red;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  opacity: 0;
+}
+
+.sing-in-password-container,
+.confirm-password-container {
+  cursor: pointer;
+  caret-color: transparent;
+  align-items: center;
+}
+
+.field-container {
+  height: 326px;
+  width: 422px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#sign-in-img-lock {
+  height: 24px;
+  width: 24px;
+  border: none;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  cursor: pointer;
+}
+
+#confirm-img-lock {
+  height: 24px;
+  width: 24px;
+  border: none;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  cursor: pointer;
+}
+
+#sign-in-password-input,
+#confirm-password-input,
+#sign-in-name,
+#sign-in-email-input {
+  background-size: 24px;
+  font-family: "Inter";
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 0 12px 0 12px;
+  font-weight: 400;
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.sign-in-password-container,
+.confirm-password-container {
+  position: relative;
+}
+
+.ipn-field {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ipn-field:nth-last-child(4) {
+  padding-bottom: 0;
+}
+
+#sign-in-name {
+  background: url(../assets/img/login/person.svg) no-repeat scroll 96%;
+  background-size: 24px;
+}
+
+#sign-in-email-input {
+  background: url(../assets/img/login/input-email.svg) no-repeat scroll 96%;
+  background-size: 24px;
+}
+
+#sign-in-btn {
+  width: 110px;
+  height: 48px;
+  padding: 16px, 24px, 15px, 24px;
+  border-radius: 8px;
+  gap: 10px;
+  background-color: #2a3647;
+  color: white;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-in-btn:hover {
+  color: white;
+  background-color: #29abe2;
+}
+
+#sign-in-name:hover, #sign-in-email-input:hover, #sign-in-password-input:hover, #confirm-password-input:hover {
+    border-color: #29abe2;
+  }
+
+
+#sign-up-successfully {
+  display: flex;
+  width: 312px;
+  height: 74px;
+  border-radius: 8px;
+  background-color: #2a3647;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  border: none;
+  position: absolute;
+  top: 100px ;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#email-in-use{
+  display: flex;
+  width: 312px;
+  height: 74px;
+  border-radius: 8px;
+  background-color: #2a3647;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  border: none;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fading-out {
+  animation: fading-out 5s;
+}
+
+@keyframes fading-out {
+  0% {
+    z-index: 0;
+    opacity: 1;
+  }
+  100% {
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+.header-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px 0 0px;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.sign-in-login-checkbox a {
+  text-decoration: none;
+  color: #29abe2;
+}
+
+
+
+@media (max-width: 700px) {
+  #sign-in-container {
+    height: 700px;
+    width: 500px;
+
+
+  }
+  .sign-in-headline {
+    padding-top: 40px;
+  }
+
+  .arrow {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  #sign-in-name {
+    background-image: none;
+  }
+}
+
+  
+  .arrow {
+ padding-right: 40px;
+ padding-left: 0px !important;
+  }
+
+#sign-in-name {
+  background-image: none;
+}
+
+ @media (max-width: 550px) {
+
+  #sign-in-password-match {
+    margin-left: 20px;
+  }
+
+  #sign-in-container {
+    height: 600px;
+    width: 320px;
+  }
+
+  #sign-in-password-input,
+  #confirm-password-input,
+  #sign-in-name,
+  #sign-in-email-input {
+     width: 80%;
+  }
+
+  #sign-in-img-lock {
+    right: 30px;
+    top: 14px;
+  }
+  
+  #confirm-img-lock {
+    right: 30px;
+    top: 14px;
+  }
+
+  .header-box {
+    padding: 0;
+  }
+
+ }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../js/board.js" defer></script>
+		<script src="../js/add_task.js"></script>
+		<script src="../js/add-task-popup.js" defer></script>
+		<script src="../js/summary.js"></script>
+		<link rel="stylesheet" href="../css/fonts.css" />
+		<link rel="stylesheet" href="../css/add-task.css" />
+		<link
+			rel="icon"
+			href="../assets/img/index/Logo for Favicon.svg"
+			type="image/x-icon"
+		/>
+
+		<script src="../js/script.js " defer></script>
+		<link
+			rel="stylesheet"
+			href="../css/board.css
+    "
+		/>
+		<link rel="stylesheet" href="/css/add-task-pop-up.css" />
+		<title>JOIN - Board</title>
+	</head>
+	<body
+		onload="includeHTML();   loadFromServer('tasks', todos ); setTimeout(() => {
+    updateHTML()
+  }, 500);; loadCurrentUser(); init(); initBoard()"
+	>
+		<div w3-include-html="../includes/sidebar.html"></div>
+		<div w3-include-html="../includes/header.html"></div>
+		<div class="board">
+			<div class="create">
+				<p>Board</p>
+				<div class="frame123">
+					<div class="search">
+						<input
+							class="input-search"
+							type="text"
+							name="search"
+							id="search"
+							placeholder="Find Task"
+							onkeyup="searchTasks()"
+						/>
+						<div class="button-search" onclick="searchTasks()">
+							<img
+								class="img-search"
+								src="../assets/img/board/search.svg"
+								alt=""
+							/>
+						</div>
+					</div>
+
+					<button class="add-task-btn" onclick="addTaskPopUp('toDo')">
+						Add Task +
+					</button>
+					<a href="../html/add_task.html">
+						<button class="add-task-btn-mobile">+</button>
+					</a>
+				</div>
+			</div>
+			<div class="search-mobile">
+				<input
+					class="input-search"
+					type="text"
+					name="search"
+					id="search-mobile"
+					placeholder="Find Task"
+					onkeyup="searchTasksMobile()"
+				/>
+				<div class="button-search" onclick="searchTasksMobile()">
+					<img class="img-search" src="../assets/img/board/search.svg" alt="" />
+				</div>
+			</div>
+			<div class="overview">
+				<div class="task-container">
+					<div class="section">
+						<div class="status">To do</div>
+						<button class="plus-btn" onclick="addTaskPopUp('toDo')">+</button>
+						<a href="../html/add_task.html">
+							<button class="plus-btn-mobile">+</button>
+						</a>
+					</div>
+					<div
+						class="status-container"
+						id="toDo"
+						ondrop="moveTo('toDo')"
+						ondragover="allowDrop(event); highlight(event)"
+						ondragleave="removeHighlight(event)"
+					></div>
+				</div>
+
+				<div class="task-container">
+					<div class="section">
+						<div class="status">In progress</div>
+						<button class="plus-btn" onclick="addTaskPopUp('inProgress')">
+							+
+						</button>
+						<a href="../html/add_task.html">
+							<button class="plus-btn-mobile">+</button>
+						</a>
+					</div>
+					<div
+						class="status-container"
+						id="inProgress"
+						ondrop="moveTo('inProgress')"
+						ondragover="allowDrop(event); highlight(event)"
+						ondragleave="removeHighlight(event)"
+					></div>
+				</div>
+
+				<div class="task-container">
+					<div class="section">
+						<div class="status">Await feedback</div>
+						<button class="plus-btn" onclick="addTaskPopUp('awaitFeedback')">
+							+
+						</button>
+						<a href="../html/add_task.html">
+							<button class="plus-btn-mobile">+</button>
+						</a>
+					</div>
+					<div
+						class="status-container"
+						id="awaitFeedback"
+						ondrop="moveTo('awaitFeedback')"
+						ondragover="allowDrop(event); highlight(event)"
+						ondragleave="removeHighlight(event)"
+					></div>
+				</div>
+
+				<div class="task-container">
+					<div class="section">
+						<div class="status">Done</div>
+					</div>
+					<div
+						class="status-container"
+						id="done"
+						ondrop="moveTo('done')"
+						ondragover="allowDrop(event); highlight(event)"
+						ondragleave="removeHighlight(event)"
+					></div>
+				</div>
+			</div>
+		</div>
+		<div class="task-pop-up d-none" id="task-pop-up"></div>
+		<div class="todo-pop-up d-none" id="todo-pop-up">
+			<div class="container-popup">
+				<div class="todo-popup-content">
+					<div class="flex">
+						<img
+							src="../assets/img/board/cancel.svg"
+							class="btn-close"
+							onclick="closePopupCard(event)"
+							alt="Close"
+						/>
+						<p class="todo-type" id="popup-type"></p>
+					</div>
+					<div class="popup-info-container">
+						<h2 id="popup-title"></h2>
+						<p id="popup-description"></p>
+						<div class="todo-popup-row">
+							<div><b>Due Date:</b></div>
+							<div class="todo-popup-row-right" id="popup-due-date"></div>
+						</div>
+						<div class="todo-popup-row">
+							<div><b>Priority:</b></div>
+							<div id="popup-prio-container"></div>
+							<div id="popup-prio-icon"></div>
+						</div>
+						<div class="todo-assigend-container" id="todo-assigend-container">
+							<div class="assignedToHeadline"><b>Assigned to:</b></div>
+						</div>
+						<div
+							id="todo-assignment-list-container"
+							class="todo-assignment-list-container"
+						></div>
+
+						<div class="todo-subtask-container">
+							<div class="todo-subTask-titel"><b>Subtasks</b></div>
+							<div
+								id="todo-subtask-list-container"
+								class="todo-subtask-list-container"
+							></div>
+						</div>
+					</div>
+					<div id="popup-buttons"></div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="edit-task-popup-container d-none"
+			id="edit-task-popup-container"
+		></div>
+	</body>
+</html>
